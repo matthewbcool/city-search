@@ -19,7 +19,6 @@ const listSearchCities = data => {
 
 const emptySearchElements = () => {
   const currentSearchContainer = document.querySelector(".search-container");
-  console.log(currentSearchContainer);
   if (currentSearchContainer !== null) {
     currentSearchContainer.remove();
   }
@@ -40,13 +39,3 @@ const searchForCity = event => {
     });
 };
 searchBtn.onclick = searchForCity;
-
-/* let examplePromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    reject(new Error('uh oh, wha happened?'))
-  }, 5000)
-})
-
-console.log(examplePromise)
-examplePromise.then(alert).catch(alert)
- */
