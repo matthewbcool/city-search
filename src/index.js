@@ -17,9 +17,17 @@ const listSearchCities = data => {
   document.querySelector("main").append(searchContainer);
 };
 
+const emptySearchElements = () => {
+  const currentSearchContainer = document.querySelector(".search-container");
+  console.log(currentSearchContainer);
+  if (currentSearchContainer !== null) {
+    currentSearchContainer.remove();
+  }
+};
+
 const searchForCity = event => {
   event.preventDefault();
-
+  emptySearchElements();
   let cityName = document.getElementById("city-name").value;
   fetch(`https://api.teleport.org/api/cities/?search=${cityName}`)
     .then(function(response) {
@@ -27,7 +35,6 @@ const searchForCity = event => {
     })
     .then(function(myJson) {
       const data = myJson["_embedded"]["city:search-results"];
-      console.log(data);
 
       listSearchCities(data);
     });
