@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: #eeeeee;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: #222831;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #eeeeee;
+  font-size: 1.7rem;
+  padding: 10px 10px;
+  margin: 10px 40px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline-color: #222831;
+}
+
+label {
+  font-size: 1.7rem;
+}
+
+.list-item {
+  list-style-type: none;
+  border: 2px solid #eeeeee;
+  padding: 2rem;
+  margin: 0px 40px 0px 0px;
+}
+
+.list-item:nth-child(2n) {
+  background-color: #393e46;
+}
+.list-item:last-child {
+  border-bottom: 4px solid #eeeeee;
+}
+.list-item:first-child {
+  border-top: 4px solid #eeeeee;
+}
